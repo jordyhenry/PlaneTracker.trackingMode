@@ -1,4 +1,4 @@
-# trackingMode (sparkar)
+# trackingMode (sparkar v84)
 A simple project to demonstrate how to switch between tracking modes on plane tracker 
 
 ![trackingMode usage example gif](out.gif)

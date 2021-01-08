@@ -17,9 +17,7 @@ const Textures = require('Textures');
   
     items: [
       { image_texture: horizontalIcon },
-      { image_texture: verticalIcon },
-      { image_texture: movingIcon },
-      { image_texture: horizontalIcon }
+      { image_texture: movingIcon }
     ]
   }
   
@@ -30,11 +28,7 @@ const Textures = require('Textures');
     if(index.newValue == 0)
       planeTracker.mode = Scene.TrackingMode.PLANE
     else if(index.newValue == 1)
-      planeTracker.mode = Scene.TrackingMode.VERTICAL_PLANE
-    else if(index.newValue == 2)
       planeTracker.mode = Scene.TrackingMode.MOVING_OBJECT
-    else if(index.newValue == 3)
-      planeTracker.mode = Scene.TrackingMode.ARBITRARY_DEPTH
   })
   
   TouchGestures.onTap().subscribe(function(touch){

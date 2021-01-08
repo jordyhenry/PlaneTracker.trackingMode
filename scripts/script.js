@@ -4,10 +4,10 @@ const NativeUI = require('NativeUI');
 const Textures = require('Textures');
 
 (async function(){
-  const planeTracker = Scene.root.find('planeTracker')
-  const horizontalIcon = Textures.get('horizontal')
-  const verticalIcon = Textures.get('vertical')
-  const movingIcon = Textures.get('moving')
+  const planeTracker = await Scene.root.findFirst('planeTracker')
+  const horizontalIcon = await Textures.findFirst('horizontal')
+  const verticalIcon = await Textures.findFirst('vertical')
+  const movingIcon = await Textures.findFirst('moving')
   
   const picker = NativeUI.picker
   const index = 0
@@ -25,16 +25,16 @@ const Textures = require('Textures');
   
   picker.configure(pickerConfiguration)
   picker.visible = true
-  
+
   picker.selectedIndex.monitor().subscribe(function(index){
     if(index.newValue == 0)
-      planeTracker.trackingMode = Scene.TrackingMode.PLANE
+      planeTracker.mode = Scene.TrackingMode.PLANE
     else if(index.newValue == 1)
-      planeTracker.trackingMode = Scene.TrackingMode.VERTICAL_PLANE
+      planeTracker.mode = Scene.TrackingMode.VERTICAL_PLANE
     else if(index.newValue == 2)
-      planeTracker.trackingMode = Scene.TrackingMode.MOVING_OBJECT
+      planeTracker.mode = Scene.TrackingMode.MOVING_OBJECT
     else if(index.newValue == 3)
-      planeTracker.trackingMode = Scene.TrackingMode.ARBITRARY_DEPTH
+      planeTracker.mode = Scene.TrackingMode.ARBITRARY_DEPTH
   })
   
   TouchGestures.onTap().subscribe(function(touch){

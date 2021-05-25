@@ -1,1 +1,28 @@
-{"compilerOptions":{"baseUrl":"C:/Users/Jordy H. Pereira/AppData/Local/Temp/61d07102b810a465abc07a2ce4bcdeb63/skylight-typedefs","allowJs":true,"checkJs":true,"outDir":"C:/Users/Jordy H. Pereira/AppData/Local/Temp/61d07102b810a465abc07a2ce4bcdeb63/skylight-typedefs/out-dir"},"include":["*.js"]}
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "C:/Users/JORDYH~1/AppData/Local/Temp/b548-95e9-cb88-37a0/61d07102b810a465abc07a2ce4bcdeb63",
+    "checkJs": true,
+    "esModuleInterop": true,
+    "lib": [
+      "ES2019"
+    ],
+    "outDir": "C:/Users/JORDYH~1/AppData/Local/Temp/b548-95e9-cb88-37a0/61d07102b810a465abc07a2ce4bcdeb63/out-dir",
+    "paths": {
+      "*": [
+        "skylight-typedefs/*",
+        "skylight-node_modules/*"
+      ]
+    },
+    "typeRoots": [
+      "C:/Users/JORDYH~1/AppData/Local/Temp/b548-95e9-cb88-37a0/61d07102b810a465abc07a2ce4bcdeb63/skylight-node_modules/@types"
+    ],
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "./**/*.js",
+    "./**/*.ts"
+  ]
+}
